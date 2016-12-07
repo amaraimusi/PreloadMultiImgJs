@@ -6,48 +6,26 @@
  * @date 2016-12-7
  * @version 1.0
  * @auther kenji uehara
- * @license MIT
  * 
- * @param option
- * - flg
  */
-var PreloadMultiImg =function(option){
-	
-	
-	this.option = option;
-	
+var PreloadMultiImg =function(){
+
 	this.readed_count = 0; // Number of image files read.
 	this.img_file_count = 0; // Number of image files.
 	this.imgs = []; // Array of Image Object.
 	this.success_count = 0; // Count of successful reads.
 	this.fail_count = 0; // Count of failed reads.
-	
-	
+
 	var myself=this; // Instance of myself.
 
 	/**
 	 * initialized.
 	 */
 	this.constract=function(){
-		
-		// If Option property is empty, set a value.
-		this.option = setOptionIfEmpty(this.option);
-		
+
 	};
 	
-	// If Option property is empty, set a value.
-	function setOptionIfEmpty(option){
-		
-		if(option == undefined){
-			option = {};
-		}
-		
-		if(option['flg'] == undefined){
-			option['flg'] = 0;
-		}
-		
-		return option;
-	};
+
 	
 	
 	/**
